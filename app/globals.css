@@ -1,26 +1,327 @@
 @import "tailwindcss";
 
+/* ==========================================================
+   HOUSE OF SIRENA DESIGN TOKENS
+========================================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  /* Foundations */
+
+  --pearl: #F8F7F4;
+  --ivory-sand: #F3EEE7;
+
+  /* Signature */
+
+  --pearlescent-lagoon: #A8CDD0;
+  --teal-blue: #6F9EA3;
+  --deep-lagoon: #4F7278;
+
+  /* Accent */
+
+  --champagne: #C8A96A;
+
+  /* Atmosphere */
+
+  --sea-mist: #EAF2F3;
+  --driftwood: #8B8D88;
+
+  /* Secondary Palette */
+
+  --sea-glass: #BFD8D2;
+  --oyster-grey: #D8D4CF;
+  --shell-pink: #E4C6CB;
+  --soft-sage: #B9C4B4;
+  --coral-beige: #D8B9A5;
+  --warm-stone: #C9B8A8;
+  --mist: #E7ECEB;
+  --sand: #E8DFD2;
+  --pearl-grey: #D9D8D6;
+
+  /* Semantic */
+
+  --background: var(--pearl);
+
+  --surface-primary: var(--pearl);
+  --surface-secondary: var(--ivory-sand);
+
+  --text-primary: #18343B;
+  --text-secondary: #66737A;
+
+  --border-light: #E5DED4;
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ==========================================================
+   BASE
+========================================================== */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+
+  margin: 0;
+  padding: 0;
+
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+  color: var(--text-primary);
+
+  font-family: var(--font-inter), sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+*{
+  box-sizing:border-box;
+}
+
+a{
+
+  text-decoration:none;
+  color:inherit;
+
+}
+
+button{
+
+  cursor:pointer;
+  transition:all .5s ease;
+
+}
+
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+.font-heading{
+  font-family:var(--font-cormorant), serif;
+}
+
+.font-body{
+  font-family:var(--font-inter), sans-serif;
+}
+
+.hero-word{
+  animation: heroWords 16s infinite;
+}
+
+.hero-word::after{
+  content:"Sunlight through shallow water.";
+  animation: heroText 16s infinite;
+}
+
+.hero-word{
+  color:transparent;
+}
+
+.hero-word::after{
+  color:white;
+}
+
+@keyframes heroText{
+
+  0%,20%{
+    content:"Sunlight through shallow water.";
+    opacity:1;
+  }
+
+  25%,45%{
+    content:"White sand.";
+    opacity:1;
+  }
+
+  50%,70%{
+    content:"Pearlescent reflections.";
+    opacity:1;
+  }
+
+  75%,100%{
+    content:"Where light becomes beauty.";
+    opacity:1;
+  }
+
+}
+
+@keyframes heroWords{
+
+  0%,100%{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  8%,92%{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* ======================================================
+   HERO ANIMATIONS
+====================================================== */
+
+/* Hero image slowly floats */
+
+.hero-image{
+
+  animation: heroFloat 20s ease-in-out infinite alternate;
+
+}
+
+@keyframes heroFloat{
+
+  0%{
+    transform: scale(1) translateY(0px);
+  }
+
+  100%{
+    transform: scale(1.04) translateY(-12px);
+  }
+
+}
+
+/* Hero text fades in */
+
+.hero-text{
+
+  opacity:0;
+
+  animation: heroText 2s ease forwards;
+
+  animation-delay:1s;
+
+}
+
+@keyframes heroText{
+
+  from{
+
+    opacity:0;
+    transform:translateY(24px);
+
+  }
+
+  to{
+
+    opacity:1;
+    transform:translateY(0);
+
+  }
+
+}
+
+/* Scroll fades in afterwards */
+
+.hero-scroll{
+
+  opacity:0;
+
+  animation: heroScroll 2s ease forwards;
+
+  animation-delay:2.3s;
+
+}
+
+@keyframes heroScroll{
+
+  from{
+
+    opacity:0;
+
+  }
+
+  to{
+
+    opacity:1;
+
+  }
+
+}
+
+/* ======================================================
+   PEARL LIGHT OVER WATER
+====================================================== */
+
+.pearl-shimmer{
+
+  background:
+  linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,.18) 50%,
+    transparent 70%
+  );
+
+  transform:translateX(-100%);
+
+  animation:
+  pearlMove 12s ease-in-out infinite;
+
+}
+
+@keyframes pearlMove{
+
+0%{
+
+transform:translateX(-100%);
+
+}
+
+50%{
+
+transform:translateX(100%);
+
+}
+
+100%{
+
+transform:translateX(100%);
+
+}
+
+}
+
+/* ======================================================
+   ATELIER SCROLL
+====================================================== */
+
+.scroll-line{
+
+width:1px;
+
+height:55px;
+
+background:
+rgba(255,255,255,.65);
+
+animation:
+scrollFade 3s ease-in-out infinite;
+
+}
+
+@keyframes scrollFade{
+
+0%,100%{
+
+opacity:.3;
+
+transform:scaleY(.6);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scaleY(1);
+
+}
+
 }
