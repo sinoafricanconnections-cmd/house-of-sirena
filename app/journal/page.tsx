@@ -27,11 +27,9 @@ export default function JournalPage() {
       {/* ======================================================
           FEATURED EDITORIAL
       ====================================================== */}
+<section className="pb-32">
 
-      <section className="px-8 pb-32">
-        <div className="max-w-7xl mx-auto">
-
-          <div className="relative h-[650px] rounded-[20px] overflow-hidden">
+  <div className="relative h-[650px] w-full overflow-hidden">
 
            <Image
   src="/images/journalhero.png"
@@ -43,7 +41,7 @@ export default function JournalPage() {
 
           </div>
 
-          <div className="max-w-3xl mt-12">
+         <div className="max-w-3xl mx-auto px-8 mt-12">
 
             <p className="uppercase tracking-[0.5em] text-xs text-[var(--text-secondary)] mb-8">
               Featured Perspective
@@ -66,7 +64,6 @@ export default function JournalPage() {
 
           </div>
 
-        </div>
       </section>
 
       {/* ======================================================
