@@ -42,7 +42,7 @@ export default function JournalPage() {
 
           </div>
 
-         <div className="max-w-3xl mx-auto px-8 mt-12">
+        <div className="max-w-3xl mt-12">
 
             <p className="uppercase tracking-[0.5em] text-xs text-[var(--text-secondary)] mb-8">
               Featured Perspective
