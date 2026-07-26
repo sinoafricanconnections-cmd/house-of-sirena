@@ -44,7 +44,7 @@ export default function Footer() {
         </div>
 
         {/* Navigation */}
-        <div className="mt-28 grid grid-cols-2 lg:grid-cols-5 gap-16">
+        <div className="mt-28 grid grid-cols-2 lg:grid-cols-6 gap-16">
 
           {/* The House */}
           <div>
@@ -78,10 +78,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Journal */}
+          {/* Discover */}
           <div>
             <p className="uppercase tracking-[0.35em] text-xs text-white/70 mb-5">
-              Journal
+              Discover
             </p>
 
             <div className="flex flex-col gap-3">
@@ -91,16 +91,7 @@ export default function Footer() {
               >
                 Journal
               </Link>
-            </div>
-          </div>
 
-          {/* Ritual */}
-          <div>
-            <p className="uppercase tracking-[0.35em] text-xs text-white/70 mb-5">
-              Ritual
-            </p>
-
-            <div className="flex flex-col gap-3">
               <Link
                 href="/ritual"
                 className="hover:text-white transition-colors"
@@ -110,10 +101,77 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* From the House */}
+          {/* Customer Care */}
           <div>
             <p className="uppercase tracking-[0.35em] text-xs text-white/70 mb-5">
-              From the House
+              Customer Care
+            </p>
+
+            <div className="flex flex-col gap-3">
+              <Link
+                href="/shipping"
+                className="hover:text-white transition-colors"
+              >
+                Shipping Policy
+              </Link>
+
+              <Link
+                href="/returns"
+                className="hover:text-white transition-colors"
+              >
+                Returns & Refunds
+              </Link>
+
+              <Link
+                href="/faq"
+                className="hover:text-white transition-colors"
+              >
+                FAQ
+              </Link>
+
+              <Link
+                href="/contact"
+                className="hover:text-white transition-colors"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <p className="uppercase tracking-[0.35em] text-xs text-white/70 mb-5">
+              Legal
+            </p>
+
+            <div className="flex flex-col gap-3">
+              <Link
+                href="/terms"
+                className="hover:text-white transition-colors"
+              >
+                Terms & Conditions
+              </Link>
+
+              <Link
+                href="/privacy"
+                className="hover:text-white transition-colors"
+              >
+                Privacy Policy
+              </Link>
+
+              <Link
+                href="/cookies"
+                className="hover:text-white transition-colors"
+              >
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
+
+          {/* Follow */}
+          <div>
+            <p className="uppercase tracking-[0.35em] text-xs text-white/70 mb-5">
+              From the house
             </p>
 
             <div className="flex flex-col gap-3">
