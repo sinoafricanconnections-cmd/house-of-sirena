@@ -34,7 +34,7 @@ export default function JournalPage() {
           <div className="relative h-[650px] rounded-[20px] overflow-hidden">
 
            <Image
-  src="/images/morning-by-the-sea.png"
+  src="/images/journalhero.png"
   alt="Morning by the sea"
   fill
   priority
