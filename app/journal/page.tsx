@@ -27,9 +27,10 @@ export default function JournalPage() {
       {/* ======================================================
           FEATURED EDITORIAL
       ====================================================== */}
-<section className="pb-32">
+<section className="px-8 pb-32">
+  <div className="max-w-7xl mx-auto">
 
-  <div className="relative h-[650px] w-full overflow-hidden">
+    <div className="relative h-[800px] rounded-[20px] overflow-hidden">
 
            <Image
   src="/images/journalhero.png"
@@ -63,6 +64,7 @@ export default function JournalPage() {
             </button>
 
           </div>
+        </div>
 
       </section>
 
