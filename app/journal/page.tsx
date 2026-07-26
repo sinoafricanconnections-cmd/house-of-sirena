@@ -24,25 +24,27 @@ export default function JournalPage() {
         </p>
       </section>
 
-      {/* ======================================================
+            {/* ======================================================
           FEATURED EDITORIAL
       ====================================================== */}
-<section className="px-8 pb-32">
-  <div className="max-w-7xl mx-auto">
 
-    <div className="relative h-[800px] rounded-[20px] overflow-hidden">
+      <section className="pb-32">
 
-           <Image
-  src="/images/journalhero.png"
-  alt="Morning by the sea"
-  fill
-  priority
-  className="object-cover object-center"
-/>
+        <div className="relative h-[800px] w-full overflow-hidden">
 
-          </div>
+          <Image
+            src="/images/journalhero.png"
+            alt="Morning by the sea"
+            fill
+            priority
+            className="object-cover object-center"
+          />
 
-        <div className="max-w-3xl mt-12">
+        </div>
+
+        <div className="max-w-7xl mx-auto px-8">
+
+          <div className="max-w-3xl mt-12">
 
             <p className="uppercase tracking-[0.5em] text-xs text-[var(--text-secondary)] mb-8">
               Featured Perspective
@@ -64,6 +66,7 @@ export default function JournalPage() {
             </button>
 
           </div>
+
         </div>
 
       </section>
