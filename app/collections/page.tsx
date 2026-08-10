@@ -1,7 +1,23 @@
+import Link from "next/link";
+
 export default function PearlCollection() {
+  const products = [
+    {
+      name: "Pearl Muse",
+      slug: "pearl-muse",
+    },
+    {
+      name: "Ocean Grace",
+      slug: "ocean-grace",
+    },
+    {
+      name: "Golden Siren",
+      slug: "golden-siren",
+    },
+  ];
+
   return (
     <main className="bg-[var(--surface-primary)] text-[var(--text-primary)] min-h-screen">
-
 
       {/* ======================================================
           COLLECTION HERO
@@ -9,17 +25,17 @@ export default function PearlCollection() {
 
       <section className="py-48 px-8 text-center">
 
-
-        <p className="
-          uppercase
-          tracking-[0.5em]
-          text-xs
-          text-[var(--text-secondary)]
-          mb-10
-        ">
+        <p
+          className="
+            uppercase
+            tracking-[0.5em]
+            text-xs
+            text-[var(--text-secondary)]
+            mb-10
+          "
+        >
           Collection I
         </p>
-
 
         <h1
           className="
@@ -35,7 +51,6 @@ export default function PearlCollection() {
           Collection
         </h1>
 
-
         <p
           className="
             max-w-2xl
@@ -50,38 +65,22 @@ export default function PearlCollection() {
           and timeless beauty.
         </p>
 
-
       </section>
-
-
-
-
-
 
       {/* ======================================================
           PRODUCT CARDS
       ====================================================== */}
 
-
       <section className="py-32 bg-[var(--surface-secondary)]">
-
 
         <div className="max-w-7xl mx-auto px-8">
 
-
-
           <div className="grid md:grid-cols-3 gap-10">
 
-
-            {[
-              "Pearl Muse",
-              "Ocean Grace",
-              "Golden Siren"
-            ].map((product)=>(
-
+            {products.map((product) => (
 
               <article
-                key={product}
+                key={product.slug}
                 className="
                   group
                   bg-white
@@ -93,10 +92,7 @@ export default function PearlCollection() {
                 "
               >
 
-
-
                 {/* PRODUCT IMAGE PLACEHOLDER */}
-
 
                 <div
                   className="
@@ -108,10 +104,9 @@ export default function PearlCollection() {
                   "
                   style={{
                     background:
-                    "radial-gradient(circle,#FFFFFF 0%,#F1E7D7 55%,#DCCFC0 100%)"
+                      "radial-gradient(circle,#FFFFFF 0%,#F1E7D7 55%,#DCCFC0 100%)",
                   }}
                 >
-
 
                   <div
                     className="
@@ -134,19 +129,11 @@ export default function PearlCollection() {
                     ✧
                   </div>
 
-
                 </div>
-
-
-
-
-
 
                 {/* PRODUCT DETAILS */}
 
-
                 <div className="p-10">
-
 
                   <p
                     className="
@@ -160,8 +147,6 @@ export default function PearlCollection() {
                     Lash Collection
                   </p>
 
-
-
                   <h2
                     className="
                       font-heading
@@ -169,11 +154,8 @@ export default function PearlCollection() {
                       font-light
                     "
                   >
-                    {product}
+                    {product.name}
                   </h2>
-
-
-
 
                   <p
                     className="
@@ -186,11 +168,10 @@ export default function PearlCollection() {
                     ocean light and timeless elegance.
                   </p>
 
-
-
-
-                  <button
+                  <Link
+                    href={`/collections/${product.slug}`}
                     className="
+                      inline-block
                       mt-8
                       uppercase
                       tracking-[0.35em]
@@ -198,33 +179,25 @@ export default function PearlCollection() {
                       border-b
                       border-[var(--champagne)]
                       pb-2
+                      transition-all
+                      duration-300
+                      hover:text-[var(--champagne)]
                     "
                   >
-                    Discover
-                  </button>
-
-
+                    View Details
+                  </Link>
 
                 </div>
 
-
-
               </article>
-
 
             ))}
 
-
           </div>
-
-
 
         </div>
 
-
       </section>
-
-
 
     </main>
   );

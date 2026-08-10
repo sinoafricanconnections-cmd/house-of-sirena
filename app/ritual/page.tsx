@@ -1,41 +1,83 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function RitualPage() {
   return (
     <main className="bg-[var(--surface-primary)] text-[var(--text-primary)]">
 
       {/* ====================================================== */}
-      {/* HERO */}
-      {/* ====================================================== */}
+{/* HERO */}
+{/* ====================================================== */}
 
-      <section className="py-48 px-8 text-center">
+<section className="relative h-screen overflow-hidden">
 
-        <p className="uppercase tracking-[0.5em] text-xs text-[var(--text-secondary)] mb-8">
+  {/* Hero Image */}
+
+  <Image
+    src="/images/ritual-hero.png"
+    alt="House of Sirena Ritual"
+    fill
+    priority
+    className="object-cover object-right"
+  />
+
+  {/* Soft Overlay */}
+
+  <div className="absolute inset-0 bg-gradient-to-r from-[rgba(248,247,244,0.90)] via-[rgba(248,247,244,0.55)] to-transparent" />
+
+  {/* Hero Content */}
+
+  <div className="relative z-10 flex h-full items-center">
+
+    <div className="mx-auto w-full max-w-7xl px-8">
+
+      <div className="max-w-xl">
+
+        <p className="mb-8 uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)]">
           House of Sirena
         </p>
 
-        <h1 className="font-heading text-6xl md:text-8xl">
+        <h1 className="font-heading text-6xl md:text-8xl leading-none">
           Ritual
         </h1>
 
-        <p className="mt-10 max-w-2xl mx-auto text-lg leading-9 text-[var(--text-secondary)]">
+        <p className="mt-10 text-lg leading-9 text-[var(--text-secondary)]">
           Every creation becomes part of a single ritual of beauty—
           an experience to be worn with intention, presence and confidence.
         </p>
 
-      </section>
+      </div>
 
+    </div>
+
+  </div>
+
+</section>
 
       {/* ====================================================== */}
       {/* INTRODUCTION */}
       {/* ====================================================== */}
 
-      <section className="py-32 px-8 bg-[var(--ivory-sand)]">
+      <section
+        className="px-8 py-40"
+        style={{
+          background:
+            "linear-gradient(180deg,#F8F7F4 0%,#F5F1EB 100%)",
+        }}
+      >
 
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
 
-          <h2 className="font-heading text-5xl mb-10">
-            Beauty begins long before the mirror.
+          <p className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)] mb-8">
+            Ritual
+          </p>
+
+          <h2 className="font-heading text-5xl md:text-6xl leading-tight mb-10">
+            Beauty begins
+            <br />
+            long before
+            <br />
+            the mirror.
           </h2>
 
           <p className="text-lg leading-9 text-[var(--text-secondary)]">
@@ -48,38 +90,45 @@ export default function RitualPage() {
         </div>
 
       </section>
-
-
-
       {/* ====================================================== */}
-      {/* PREPARING */}
+      {/* PREPARATION */}
       {/* ====================================================== */}
 
-      <section className="py-40 px-8">
+      <section
+        className="px-8 py-44"
+        style={{
+          background:
+            "linear-gradient(180deg,#F5F1EB 0%,#F8F7F4 100%)",
+        }}
+      >
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.15fr_0.85fr] gap-20 items-center">
 
+          {/* Image */}
 
-          <div className="h-[520px] rounded-[32px] bg-[var(--pearl)] flex items-center justify-center">
+          <div className="h-[620px] rounded-[36px] bg-[var(--surface-secondary)] flex items-center justify-center">
 
-            <span className="uppercase tracking-[0.5em] text-xs text-[var(--text-secondary)]">
+            <span className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)]">
               Preparation Image
             </span>
 
           </div>
 
+          {/* Copy */}
 
-          <div>
+          <div className="max-w-md">
 
-            <p className="uppercase tracking-[0.4em] text-xs mb-6 text-[var(--text-secondary)]">
-              Step One
+            <p className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)] mb-6">
+              Preparation
             </p>
 
-            <h2 className="font-heading text-5xl mb-8">
-              The beginning of the ritual.
+            <h2 className="font-heading text-5xl md:text-6xl leading-tight mb-8">
+              The beginning
+              <br />
+              of the ritual.
             </h2>
 
-            <p className="leading-9 text-[var(--text-secondary)]">
+            <p className="leading-9 text-lg text-[var(--text-secondary)]">
               Begin with clean, dry eyelids and prepare your natural
               lashes. Find a quiet moment, good lighting and allow
               yourself the time to enjoy the experience.
@@ -87,210 +136,266 @@ export default function RitualPage() {
 
           </div>
 
-
         </div>
 
       </section>
-
-
-
 
       {/* ====================================================== */}
       {/* APPLICATION */}
       {/* ====================================================== */}
 
-      <section className="py-40 px-8 bg-[var(--sea-glass)]/40">
+      <section
+        className="px-8 py-44"
+        style={{
+          background:
+            "linear-gradient(180deg,#F8F7F4 0%,#F6F2EC 100%)",
+        }}
+      >
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[0.85fr_1.15fr] gap-20 items-center">
 
+          {/* Copy */}
 
-          <div>
+          <div className="max-w-md">
 
-            <p className="uppercase tracking-[0.4em] text-xs mb-6 text-[var(--text-secondary)]">
-              Step Two
+            <p className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)] mb-6">
+              Application
             </p>
 
-            <h2 className="font-heading text-5xl mb-8">
-              Every detail matters.
+            <h2 className="font-heading text-5xl md:text-6xl leading-tight mb-10">
+              Every detail
+              <br />
+              matters.
             </h2>
 
+            <div className="space-y-8">
 
-            <div className="space-y-6 leading-8 text-[var(--text-secondary)]">
+              <div>
+                <p className="text-sm uppercase tracking-[0.35em] text-[var(--text-secondary)] mb-2">
+                  01
+                </p>
+                <p className="leading-8 text-[var(--text-secondary)]">
+                  Measure the lash against your natural lash line.
+                </p>
+              </div>
 
-              <p>Measure the lash against your natural lash line.</p>
+              <div className="w-16 border-t border-[var(--border-light)]" />
 
-              <p>Trim from the outer edge if required.</p>
+              <div>
+                <p className="text-sm uppercase tracking-[0.35em] text-[var(--text-secondary)] mb-2">
+                  02
+                </p>
+                <p className="leading-8 text-[var(--text-secondary)]">
+                  Trim from the outer edge if required.
+                </p>
+              </div>
 
-              <p>Apply a fine line of adhesive.</p>
+              <div className="w-16 border-t border-[var(--border-light)]" />
 
-              <p>Allow the adhesive to become tacky.</p>
+              <div>
+                <p className="text-sm uppercase tracking-[0.35em] text-[var(--text-secondary)] mb-2">
+                  03
+                </p>
+                <p className="leading-8 text-[var(--text-secondary)]">
+                  Apply a fine line of adhesive.
+                </p>
+              </div>
 
-              <p>Place the lash gently and adjust until comfortable.</p>
+              <div className="w-16 border-t border-[var(--border-light)]" />
+
+              <div>
+                <p className="text-sm uppercase tracking-[0.35em] text-[var(--text-secondary)] mb-2">
+                  04
+                </p>
+                <p className="leading-8 text-[var(--text-secondary)]">
+                  Allow the adhesive to become tacky.
+                </p>
+              </div>
+
+              <div className="w-16 border-t border-[var(--border-light)]" />
+
+              <div>
+                <p className="text-sm uppercase tracking-[0.35em] text-[var(--text-secondary)] mb-2">
+                  05
+                </p>
+                <p className="leading-8 text-[var(--text-secondary)]">
+                  Place the lash gently and adjust until comfortable.
+                </p>
+              </div>
 
             </div>
 
-
           </div>
 
+          {/* Image */}
 
+          <div className="h-[620px] rounded-[36px] bg-[var(--surface-secondary)] flex items-center justify-center">
 
-          <div className="h-[520px] rounded-[32px] bg-[var(--ivory-sand)] flex items-center justify-center">
-
-            <span className="uppercase tracking-[0.5em] text-xs text-[var(--text-secondary)]">
+            <span className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)]">
               Application Image
             </span>
 
           </div>
 
-
         </div>
 
       </section>
-
-
 
 
       {/* ====================================================== */}
       {/* THE MOMENT */}
       {/* ====================================================== */}
 
-      <section className="py-48 bg-[var(--pearlescent-lagoon)]">
+      <section
+        className="px-8 py-56"
+        style={{
+          background:
+            "linear-gradient(180deg,#F6F2EC 0%,#F8F7F4 100%)",
+        }}
+      >
 
-        <div className="max-w-4xl mx-auto px-8 text-center">
+        <div className="max-w-4xl mx-auto text-center">
 
-
-          <p className="uppercase tracking-[0.4em] text-xs mb-8 text-[var(--deep-lagoon)]">
+          <p className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)] mb-8">
             The Moment
           </p>
 
-
-          <h2 className="font-heading text-6xl mb-10 text-[var(--deep-lagoon)]">
-            Beauty is experienced,
+          <h2 className="font-heading text-6xl md:text-8xl leading-[0.95] mb-12">
+            Beauty is
+            <br />
+            experienced,
             <br />
             not rushed.
           </h2>
 
-
-          <p className="text-lg leading-9 text-[var(--deep-lagoon)]">
+          <p className="max-w-2xl mx-auto text-lg leading-9 text-[var(--text-secondary)]">
             Every House of Sirena creation accompanies a single
             ritual of beauty. Wear it with confidence, elegance
             and intention, allowing the moment to become entirely
             your own.
           </p>
 
-
         </div>
 
       </section>
 
 
 
-
       {/* ====================================================== */}
-      {/* CLOSING */}
+      {/* CARE */}
       {/* ====================================================== */}
 
-      <section className="py-40 px-8">
+      <section
+        className="px-8 py-44"
+        style={{
+          background:
+            "linear-gradient(180deg,#F8F7F4 0%,#F5F1EB 100%)",
+        }}
+      >
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.15fr_0.85fr] gap-20 items-center">
 
+          {/* Image */}
 
-          <div className="h-[520px] rounded-[32px] bg-[var(--surface-secondary)] flex items-center justify-center">
+          <div className="h-[620px] rounded-[36px] bg-[var(--surface-secondary)] flex items-center justify-center">
 
-            <span className="uppercase tracking-[0.5em] text-xs text-[var(--text-secondary)]">
+            <span className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)]">
               Care Image
             </span>
 
           </div>
 
+          {/* Copy */}
 
+          <div className="max-w-md">
 
-          <div>
-
-            <p className="uppercase tracking-[0.4em] text-xs mb-6 text-[var(--text-secondary)]">
-              Step Three
+            <p className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)] mb-6">
+              Care
             </p>
 
-
-            <h2 className="font-heading text-5xl mb-8">
-              Every ritual finds its close.
+            <h2 className="font-heading text-5xl md:text-6xl leading-tight mb-8">
+              Every ritual
+              <br />
+              finds its close.
             </h2>
 
-
-            <p className="leading-9 text-[var(--text-secondary)]">
+            <p className="leading-9 text-lg text-[var(--text-secondary)]">
               Gently remove the lashes from the outer corner inward,
               allowing the experience to conclude with the same care
               and intention with which it began.
             </p>
 
-
           </div>
-
 
         </div>
 
       </section>
-
-
-
 
       {/* ====================================================== */}
       {/* QUESTIONS */}
       {/* ====================================================== */}
 
-      <section className="py-32 px-8 bg-[var(--ivory-sand)]">
+      <section
+        className="px-8 py-40"
+        style={{
+          background:
+            "linear-gradient(180deg,#F5F1EB 0%,#F8F7F4 100%)",
+        }}
+      >
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-3xl mx-auto">
+
+          <p className="uppercase tracking-[0.45em] text-xs text-center text-[var(--text-secondary)] mb-8">
+            Questions
+          </p>
 
           <h2 className="font-heading text-5xl text-center mb-20">
-            Questions
+            Everything you need to know.
           </h2>
 
+          <div className="space-y-14">
 
-          <div className="space-y-12">
+            <div className="border-b border-[var(--border-light)] pb-10">
 
-            <div>
-              <h3 className="font-heading text-2xl mb-3">
+              <h3 className="font-heading text-2xl mb-4">
                 Do I need adhesive?
               </h3>
 
               <p className="leading-8 text-[var(--text-secondary)]">
-                Yes. House of Sirena creations are applied using
-                your preferred lash adhesive.
+                Yes. House of Sirena creations are applied using your preferred lash adhesive.
               </p>
+
             </div>
 
+            <div className="border-b border-[var(--border-light)] pb-10">
 
-            <div>
-              <h3 className="font-heading text-2xl mb-3">
+              <h3 className="font-heading text-2xl mb-4">
                 Can the lashes be trimmed?
               </h3>
 
               <p className="leading-8 text-[var(--text-secondary)]">
-                If required, trim from the outer edge to achieve
-                your preferred fit.
+                If required, trim from the outer edge to achieve your preferred fit.
               </p>
+
             </div>
 
+            <div className="border-b border-[var(--border-light)] pb-10">
 
-            <div>
-              <h3 className="font-heading text-2xl mb-3">
+              <h3 className="font-heading text-2xl mb-4">
                 How many times are they intended to be worn?
               </h3>
 
               <p className="leading-8 text-[var(--text-secondary)]">
-                Every House of Sirena creation is crafted to become
-                part of a single ritual of beauty.
+                Every House of Sirena creation is crafted to become part of a single ritual of beauty.
               </p>
-            </div>
 
+            </div>
 
           </div>
 
         </div>
 
       </section>
-
 
 
 
@@ -298,60 +403,85 @@ export default function RitualPage() {
       {/* CONTINUE EXPLORING */}
       {/* ====================================================== */}
 
-      <section className="py-40 px-8 bg-[var(--pearlescent-lagoon)]">
+      <section className="bg-[var(--surface-primary)] px-8 py-44">
 
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
 
+          <div className="text-center mb-20">
 
-          <h2 className="font-heading text-5xl text-center mb-20">
-            Continue Exploring
-          </h2>
+            <p className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)] mb-6">
+              Continue Exploring
+            </p>
 
+            <h2 className="font-heading text-5xl md:text-6xl">
+              Continue your journey.
+            </h2>
 
-          <div className="grid md:grid-cols-2 gap-10">
+          </div>
 
+          <div className="grid lg:grid-cols-2 gap-12">
 
-            <Link href="/collections">
+            <Link href="/collections" className="group">
 
-              <div className="rounded-[32px] h-[420px] bg-[var(--surface-primary)] p-12 flex flex-col justify-end">
+              <article>
 
-                <p className="uppercase tracking-[0.4em] text-xs mb-6">
-                  Collection
-                </p>
+                <div className="h-[520px] rounded-[36px] bg-[var(--surface-secondary)] flex items-center justify-center overflow-hidden">
 
-                <h3 className="font-heading text-5xl">
-                  The Pearl Collection
-                </h3>
+                  <span className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)]">
+                    Collection Image
+                  </span>
 
-              </div>
+                </div>
+
+                <div className="pt-8">
+
+                  <p className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)] mb-4">
+                    Collection
+                  </p>
+
+                  <h3 className="font-heading text-5xl transition-opacity duration-500 group-hover:opacity-70">
+                    The Pearl Collection
+                  </h3>
+
+                </div>
+
+              </article>
 
             </Link>
 
+            <Link href="/journal" className="group">
 
+              <article>
 
-            <Link href="/journal">
+                <div className="h-[520px] rounded-[36px] bg-[var(--surface-secondary)] flex items-center justify-center overflow-hidden">
 
-              <div className="rounded-[32px] h-[420px] bg-[var(--teal-blue)] text-white p-12 flex flex-col justify-end">
+                  <span className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)]">
+                    Journal Image
+                  </span>
 
-                <p className="uppercase tracking-[0.4em] text-xs mb-6">
-                  Journal
-                </p>
+                </div>
 
-                <h3 className="font-heading text-5xl">
-                  Perspectives
-                </h3>
+                <div className="pt-8">
 
-              </div>
+                  <p className="uppercase tracking-[0.45em] text-xs text-[var(--text-secondary)] mb-4">
+                    Journal
+                  </p>
+
+                  <h3 className="font-heading text-5xl transition-opacity duration-500 group-hover:opacity-70">
+                    Perspectives
+                  </h3>
+
+                </div>
+
+              </article>
 
             </Link>
-
 
           </div>
 
         </div>
 
       </section>
-
 
     </main>
   );
