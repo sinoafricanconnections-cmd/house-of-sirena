@@ -9,11 +9,18 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@google/genai": "^2.18.0",
     "@react-three/drei": "^10.7.8",
     "@react-three/fiber": "^9.7.0",
+    "@tensorflow-models/face-landmarks-detection": "^1.0.6",
+    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
+    "@tensorflow/tfjs-core": "^4.22.0",
+    "heic2any": "^0.0.4",
     "next": "16.2.10",
+    "openai": "^7.5.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "sharp": "^0.35.3",
     "three": "^0.185.1"
   },
   "devDependencies": {
@@ -25,5 +32,8 @@
     "eslint-config-next": "16.2.10",
     "tailwindcss": "^4.3.2",
     "typescript": "^5"
+  },
+  "allowScripts": {
+    "@tensorflow/tfjs-node@4.22.0": true
   }
 }

@@ -39,6 +39,21 @@ export default function Navbar() {
           </Link>
 
           <Link
+            href="/sirena-eye-atelier"
+            className="
+              uppercase
+              tracking-[0.35em]
+              text-[11px]
+              text-[var(--deep-lagoon)]
+              hover:text-[var(--text-primary)]
+              transition-colors
+              duration-300
+            "
+          >
+            Eye Atelier
+          </Link>
+
+          <Link
             href="/collections"
             className="
               uppercase

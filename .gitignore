@@ -39,3 +39,21 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local secrets
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+
+# TypeScript
+*.tsbuildinfo
+
+# Local backups
+*.backup
+*.save
+
+# Editor settings
+.vscode/
