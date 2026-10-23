@@ -1,10 +1,10 @@
+
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import ConditionalLayout from "./components/ConditionalLayout";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,19 +32,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
       <body className={`${inter.variable} ${cormorant.variable}`}>
-
         <ScrollToTop />
-
-        <Navbar />
-
-        {children}
-
-        <Footer />
-
+        <ConditionalLayout>{children}</ConditionalLayout>
       </body>
-
     </html>
   );
 }
